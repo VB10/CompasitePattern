@@ -9,19 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-    
+    //değişkenlerimizi belirliyoruz
     private String name;
     private String dept;
     private int Salary;
     private List<Employee> subordinates;
 
     public Employee(String name, String dept, int Salary) {
+        //kurucu metodumuza gelen değerleri vererek eşleme yapıyoruz
         this.name = name;
         this.dept = dept;
         this.Salary = Salary;
        subordinates= new  ArrayList<Employee>();
     }
-    
+    //arraylist özelliklerini kullnarak ekleme çıkartma yapıyoruz
     public void add(Employee e){
         subordinates.add(e);
     }
@@ -33,7 +34,7 @@ public class Employee {
     
     return subordinates;
 }
-    
+    //bize değer döndüren metod
     public String toString() {
         return ("Employee :[ Name : "+ name 
                 +", dept : "+ dept + 
